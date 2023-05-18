@@ -31,10 +31,10 @@ export class FeedGenerator {
   static create(config?: Partial<Config>) {
     const cfg: Config = {
       port: config?.port ?? 3000,
-      hostname: config?.hostname ?? 'feed-generator.test',
+      hostname: config?.hostname ?? 'skyscraper.yugioh.gg',
       sqliteLocation: config?.sqliteLocation ?? ':memory:',
       subscriptionEndpoint: config?.subscriptionEndpoint ?? 'wss://bsky.social',
-      serviceDid: config?.serviceDid ?? 'did:example:test',
+      serviceDid: config?.serviceDid ?? 'did:example:test'
     }
     const app = express()
     const db = createDb(cfg.sqliteLocation)
@@ -49,8 +49,8 @@ export class FeedGenerator {
     const server = createServer({
       validateResponse: true,
       payload: {
-        jsonLimit: 100 * 1024, // 100kb
-        textLimit: 100 * 1024, // 100kb
+        jsonLimit: 5 * 1024 * 1024, // 100kb
+        textLimit: 5 * 1024 * 1024, // 100kb
         blobLimit: 5 * 1024 * 1024, // 5mb
       },
     })

@@ -6,7 +6,7 @@ import { validateAuth } from './auth'
 export default function (server: Server, ctx: AppContext) {
   server.app.bsky.feed.getFeedSkeleton(async ({ params, req }) => {
     if (
-      params.feed !== 'at://did:example:alice/app.bsky.feed.generator/whats-alf'
+      params.feed !== 'at://did:web:bluesky.yugioh.gg/app.bsky.feed.generator/skyscraper-ygo'
     ) {
       throw new InvalidRequestError(
         'Unsupported algorithm',

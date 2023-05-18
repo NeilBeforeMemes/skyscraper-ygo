@@ -1,9 +1,11 @@
 import dotenv from 'dotenv'
 import FeedGenerator from './server'
+import { ygoWhitelist } from './topic/ygo-whitelist'
 
 const run = async () => {
   dotenv.config()
   const server = FeedGenerator.create({
+    hostname: maybeStr(process.env.FEEDGEN_HOSTNAME),
     port: maybeInt(process.env.FEEDGEN_PORT),
     sqliteLocation: maybeStr(process.env.FEEDGEN_SQLITE_LOCATION),
     subscriptionEndpoint: maybeStr(process.env.FEEDGEN_SUBSCRIPTION_ENDPOINT),

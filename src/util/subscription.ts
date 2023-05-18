@@ -159,6 +159,9 @@ const isType = (obj: unknown, nsid: string) => {
     lexicons.assertValidRecord(nsid, obj)
     return true
   } catch (err) {
+    if(err.message.includes("image should be a blob ref")) { // this is really bad but the library is not handling images correctly LOL
+      return true;
+    }
     return false
   }
 }
