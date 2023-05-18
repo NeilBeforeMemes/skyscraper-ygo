@@ -50,5 +50,9 @@
     {
         "did": "did:plc:qw4r4a433fwz7rjjos3nvn2z",
         "handle": "evalees.bsky.social"
+    },
+    {
+        "did":"did:plc:c4m57nev3vy4sttv5r2ogmml",
+        "handle":"balvoth.bsky.social"
     }
 ]
