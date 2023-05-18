@@ -54,5 +54,9 @@
     {
         "did":"did:plc:c4m57nev3vy4sttv5r2ogmml",
         "handle":"balvoth.bsky.social"
+    },
+    {
+        "did":"did:plc:slas7hbbypeojqqf7vppoqq4",
+        "handle":"crystlabndce.bsky.social"
     }
 ]
