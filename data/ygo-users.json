@@ -52,11 +52,15 @@
         "handle": "evalees.bsky.social"
     },
     {
-        "did":"did:plc:c4m57nev3vy4sttv5r2ogmml",
-        "handle":"balvoth.bsky.social"
+        "did": "did:plc:c4m57nev3vy4sttv5r2ogmml",
+        "handle": "balvoth.bsky.social"
     },
     {
-        "did":"did:plc:slas7hbbypeojqqf7vppoqq4",
-        "handle":"crystlabndce.bsky.social"
+        "did": "did:plc:slas7hbbypeojqqf7vppoqq4",
+        "handle": "crystlabndce.bsky.social"
+    },
+    {
+        "did": "did:plc:bqgv6kq6vzxjp6bkq6zxojzf",
+        "handle": "deckdevilygo.bsky.social"
     }
 ]
