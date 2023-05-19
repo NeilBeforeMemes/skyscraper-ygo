@@ -62,5 +62,9 @@
     {
         "did": "did:plc:bqgv6kq6vzxjp6bkq6zxojzf",
         "handle": "deckdevilygo.bsky.social"
+    },
+    {
+        "did": "did:plc:3secpvvwnff5z7hniulaqoth",
+        "handle": "rjank.bsky.social"
     }
 ]
