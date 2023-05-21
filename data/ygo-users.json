@@ -66,5 +66,9 @@
     {
         "did": "did:plc:3secpvvwnff5z7hniulaqoth",
         "handle": "rjank.bsky.social"
+    },
+    {
+        "did": "did:plc:fwtr72rlcgrdqupcdl2tx3gg",
+        "handle": "flamingoygo.bsky.social"
     }
 ]
