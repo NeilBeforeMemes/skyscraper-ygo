@@ -74,5 +74,9 @@
     {
         "did": "did:plc:xwsaa5ups5jlr5mlmrn3ms2i",
         "handle": "abyssygo.bsky.social"
+    },
+    {
+        "did": "did:plc:nphbh5rwql2dqadwvhroklvh",
+        "handle": "sarabi.bsky.social"
     }
 ]
