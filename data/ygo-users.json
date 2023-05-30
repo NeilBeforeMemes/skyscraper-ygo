@@ -70,5 +70,9 @@
     {
         "did": "did:plc:fwtr72rlcgrdqupcdl2tx3gg",
         "handle": "flamingoygo.bsky.social"
+    },
+    {
+        "did": "did:plc:xwsaa5ups5jlr5mlmrn3ms2i",
+        "handle": "abyssygo.bsky.social"
     }
 ]
