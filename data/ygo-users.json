@@ -76,7 +76,27 @@
         "handle": "abyssygo.bsky.social"
     },
     {
-        "did": "did:plc:nphbh5rwql2dqadwvhroklvh",
+        "did": "did:plc:ascvkrpijcqvaeanvmbarxha",
         "handle": "sarabi.bsky.social"
+    },
+    {
+        "did": "did:plc:bll5ckk6ligesregsfb4rszf",
+        "handle": "momoflora.bsky.social"
+    },
+    {
+        "did": "did:plc:6o2bqecmbisnayz6lgv3fq6n",
+        "handle": "daimax.bsky.social"
+    },
+    {
+        "did": "did:plc:7d5bisdyhlf6gfufp5sz3s3b",
+        "handle": "nymnesis.bsky.social"
+    },
+    {
+        "did": "did:plc:o2vdmh5xjpkuuaiv2jslr6c4",
+        "handle": "lemonygo.bsky.social"
+    },
+    {
+        "did": "did:plc:m6uuwcg32ohsbbn3sxudymrq",
+        "handle": "antiantart.bsky.social"
     }
 ]
