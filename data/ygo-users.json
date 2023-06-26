@@ -122,5 +122,17 @@
     {
         "did": "did:plc:hdhj2gznfo7nktrxhxdoaws3",
         "handle": "emperorstove.bsky.social"
+    },
+    {
+        "did": "did:plc:guyszfj4jqrc7tc3ts6tlnnb",
+        "handle": "trillturban.bsky.social"
+    },
+    {
+        "did": "did:plc:5mkdviac7nzpdjgwig4tefpd",
+        "handle": "sarahyde.bsky.social"
+    },
+    {
+        "did": "did:plc:lolbgzfefvjx6xa3h5hgv2or",
+        "handle": "jasrealityunwinder.bsky.social"
     }
 ]
