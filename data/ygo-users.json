@@ -190,5 +190,17 @@
     {
         "did": "did:plc:fxho5elohfqln5tcipxcuvwb",
         "handle": "congalinelarry.bsky.social"
+    },
+    {
+        "did": "did:plc:x7j7akoh7qz4tavmaj6gbjua",
+        "handle": "kaimeratech.bsky.social"
+    },
+    {
+        "did": "did:plc:mpqovg64xou43j4yhjqbnrly",
+        "handle": "docconrad.bsky.social"
+    },
+    {
+        "did": "did:plc:46rf2rz5gi34kfupwua6ru37",
+        "handle": "scumner101.bsky.social"
     }
 ]
