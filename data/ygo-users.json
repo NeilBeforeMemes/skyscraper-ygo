@@ -202,5 +202,25 @@
     {
         "did": "did:plc:46rf2rz5gi34kfupwua6ru37",
         "handle": "scumner101.bsky.social"
+    },
+    {
+        "did": "did:plc:m57hebqksukvgdkfnazjfi3c",
+        "handle": "dire.bsky.social"
+    },
+    {
+        "did": "did:plc:r7p2kxurr3xhacwatmtgjfyl",
+        "handle": "giantskyhawk.bsky.social"
+    },
+    {
+        "did": "did:plc:rtqox65iw2bwtanuyvmduntb",
+        "handle": "farfa.bsky.social"
+    },
+    {
+        "did": "did:plc:c3t73qozmnkakkkqultocpzh",
+        "handle": "ashrav.bsky.social"
+    },
+    {
+        "did": "did:plc:muv3f6tmlvtyx2hd2dpdejwo",
+        "handle": "yggdreigontcg.bsky.social"
     }
 ]
