@@ -314,5 +314,17 @@
     {
         "did": "did:plc:ymvrsoyq4ct2ptdjrqzj5eui",
         "handle": "sophieapparently.bsky.social"
+    },
+    {
+        "did": "did:plc:3f67jwwlehnx54aoqksrje6b",
+        "handle": "regretmech.bsky.social"
+    },
+    {
+        "did": "did:plc:ldxol2mcbdjruywkxzbfdn73",
+        "handle": "thempireiain.bsky.social"
+    },
+    {
+        "did": "did:plc:wv2iwpnlvjp3drd6iecufatf",
+        "handle": "distantcoder.bsky.social"
     }
 ]
