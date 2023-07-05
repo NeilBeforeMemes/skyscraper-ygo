@@ -326,5 +326,17 @@
     {
         "did": "did:plc:wv2iwpnlvjp3drd6iecufatf",
         "handle": "distantcoder.bsky.social"
+    },
+    {
+        "did": "did:plc:cmsebwd724pahla7m3gkmyzk",
+        "handle": "sunseedjess.bsky.social"
+    },
+    {
+        "did": "did:plc:gaeh2o6wxy2uol4uirkt72pa",
+        "handle": "yugiohforbidden.bsky.social"
+    },
+    {
+        "did": "did:plc:fuanaiga4ytlyjtopzwqnmzu",
+        "handle": "ethan182.bsky.social"
     }
 ]
