@@ -338,5 +338,25 @@
     {
         "did": "did:plc:fuanaiga4ytlyjtopzwqnmzu",
         "handle": "ethan182.bsky.social"
+    },
+    {
+        "did": "did:plc:6muzub5tdwmf6dsck7e4dfhy",
+        "handle": "treckey.bsky.social"
+    },
+    {
+        "did": "did:plc:y332wgq7witq5mpoe74wknu2",
+        "handle": "m0th.site"
+    },
+    {
+        "did": "did:plc:ndpkybiv2x4twoqvliux6cf5",
+        "handle": "lautrec.xyz"
+    },
+    {
+        "did": "did:plc:jwmoudhgizlrfspzkz3l3764",
+        "handle": "waso.bsky.social"
+    },
+    {
+        "did": "did:plc:fsgcyxiedrcv4vxtld7itrdx",
+        "handle": "goldennovaygo.bsky.social"
     }
 ]
