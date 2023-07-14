@@ -374,5 +374,13 @@
     {
         "did": "did:plc:mihoob7jbmde4dffjtvwhoyt",
         "handle": "reduxk.bsky.social"
+    },
+    {
+        "did": "did:plc:5zyp3ho2tibvn3fs2u6jqwrs",
+        "handle": "junethequeen.bsky.social"
+    },
+    {
+        "did": "did:plc:oeamxgzwd5p3nf3tldbvfa36",
+        "handle": "jessyjplays.bsky.social"
     }
 ]
