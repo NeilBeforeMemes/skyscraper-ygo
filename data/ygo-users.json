@@ -358,5 +358,21 @@
     {
         "did": "did:plc:fsgcyxiedrcv4vxtld7itrdx",
         "handle": "goldennovaygo.bsky.social"
+    },
+    {
+        "did": "did:plc:jgddlhbby4qlnpilqnno2owy",
+        "handle": "ccygo.bsky.social"
+    },
+    {
+        "did": "did:plc:pmwyxstrmoenekq74hmbbihy",
+        "handle": "jooweein.bsky.social"
+    },
+    {
+        "did": "did:plc:yykbu6lhzfjdspl6nphmcttj",
+        "handle": "asagiame.bsky.social"
+    },
+    {
+        "did": "did:plc:mihoob7jbmde4dffjtvwhoyt",
+        "handle": "reduxk.bsky.social"
     }
 ]
