@@ -386,5 +386,13 @@
     {
         "did": "did:plc:vtcas2hwfcvpvje7tojktlbz",
         "handle": "kingscarletygo.bsky.social"
+    },
+    {
+        "did": "did:plc:ne32ydzjcuop5tt6h4nelbtq",
+        "handle": "ygorganization.bsky.social"
+    },
+    {
+        "did": "did:plc:vjpseiwarpzoqsbbbnznk2ij",
+        "handle": "e3keegan.bsky.social"
     }
 ]
