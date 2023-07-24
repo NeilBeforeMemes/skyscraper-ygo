@@ -394,5 +394,17 @@
     {
         "did": "did:plc:vjpseiwarpzoqsbbbnznk2ij",
         "handle": "e3keegan.bsky.social"
+    },
+    {
+        "did": "did:plc:3venpcgf47clyp4mmui3ciak",
+        "handle": "littlekuriboh.bsky.social"
+    },
+    {
+        "did": "did:plc:beheiwchqw3c2ukx3y2gtv4w",
+        "handle": "zhilinakuma.bsky.social"
+    },
+    {
+        "did": "did:plc:yijjamcmlc6yej3zxnty6v4o",
+        "handle": "mythos.bsky.social"
     }
 ]
