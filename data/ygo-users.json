@@ -406,5 +406,17 @@
     {
         "did": "did:plc:yijjamcmlc6yej3zxnty6v4o",
         "handle": "mythos.bsky.social"
+    },
+    {
+        "did": "did:plc:4ds5ilmkzmog7jw6uho4eiwg",
+        "handle": "jordanjamboree.bsky.social"
+    },
+    {
+        "did": "did:plc:fppvuafnbxc3h7ke5floflnj",
+        "handle": "vamygo.bsky.social"
+    },
+    {
+        "did": "did:plc:cjtixqc52ueibbjzrl2igtxk",
+        "handle": "ygoprog.com"
     }
 ]
