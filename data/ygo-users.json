@@ -418,5 +418,21 @@
     {
         "did": "did:plc:cjtixqc52ueibbjzrl2igtxk",
         "handle": "ygoprog.com"
+    },
+    {
+        "did": "did:plc:4eyx55fa3sfiubrl4xg53b2p",
+        "handle": "fedginator.bsky.social"
+    },
+    {
+        "did": "did:plc:ti56lounemwernu4msvwmuxz",
+        "handle": "atem.ygorganization.com"
+    },
+    {
+        "did": "did:plc:zejt4pg3ni5zdiljufzblywk",
+        "handle": "neoarkadia.ygorganization.com"
+    },
+    {
+        "did": "did:plc:6ldaingqns25xf7em2hmhr7w",
+        "handle": "antitcb.ygorganization.com"
     }
 ]
