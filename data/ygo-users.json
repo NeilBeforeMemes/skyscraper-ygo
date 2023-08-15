@@ -434,5 +434,9 @@
     {
         "did": "did:plc:6ldaingqns25xf7em2hmhr7w",
         "handle": "antitcb.ygorganization.com"
+    },
+    {
+        "did": "did:plc:hcabgrz7rbffs5gassenspiq",
+        "handle": "windupceleste.bsky.social"
     }
 ]
