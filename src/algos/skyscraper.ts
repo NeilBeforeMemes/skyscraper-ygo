@@ -2,7 +2,7 @@ import { InvalidRequestError } from '@atproto/xrpc-server'
 import { QueryParams } from '../lexicon/types/app/bsky/feed/getFeedSkeleton'
 import { AppContext } from '../config'
 
-export const uri = 'at://did:plc:cx4zd7btpgjkn46rtikc3qxo/app.bsky.feed.generator/skyscraper-ygo'
+export const uri = 'skyscraper-ygo'
 
 export const handler = async (ctx: AppContext, params: QueryParams) => {
   let builder = ctx.db
