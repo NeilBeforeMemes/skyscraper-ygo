@@ -1,7 +1,7 @@
 import http from 'http'
 import events from 'events'
 import express from 'express'
-import { DidResolver, MemoryCache } from '@atproto/did-resolver'
+import { DidResolver, MemoryCache } from '@atproto/identity'
 import { createServer } from './lexicon'
 import feedGeneration from './methods/feed-generation'
 import describeGenerator from './methods/describe-generator'
@@ -35,10 +35,10 @@ export class FeedGenerator {
     const firehose = new FirehoseSubscription(db, cfg.subscriptionEndpoint)
 
     const didCache = new MemoryCache()
-    const didResolver = new DidResolver(
-      { plcUrl: 'https://plc.directory' },
+    const didResolver = new DidResolver({
+      plcUrl: 'https://plc.directory',
       didCache,
-    )
+    })
 
     const server = createServer({
       validateResponse: true,
@@ -63,8 +63,8 @@ export class FeedGenerator {
 
   async start(): Promise<http.Server> {
     await migrateToLatest(this.db)
-    this.firehose.run()
-    this.server = this.app.listen(this.cfg.port)
+    this.firehose.run(this.cfg.subscriptionReconnectDelay)
+    this.server = this.app.listen(this.cfg.port, this.cfg.listenhost)
     await events.once(this.server, 'listening')
     return this.server
   }

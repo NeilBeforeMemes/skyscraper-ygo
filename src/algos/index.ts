@@ -8,7 +8,7 @@ import * as skyscraper from './skyscraper'
 type AlgoHandler = (ctx: AppContext, params: QueryParams) => Promise<AlgoOutput>
 
 const algos: Record<string, AlgoHandler> = {
-  [skyscraper.uri]: skyscraper.handler,
+  [skyscraper.uri]: skyscraper.handler
 }
 
 export default algos

@@ -1,5 +1,5 @@
 import { Database } from './db'
-import { DidResolver } from '@atproto/did-resolver'
+import { DidResolver } from '@atproto/identity'
 
 export type AppContext = {
   db: Database
@@ -9,8 +9,11 @@ export type AppContext = {
 
 export type Config = {
   port: number
+  listenhost: string
   hostname: string
   sqliteLocation: string
   subscriptionEndpoint: string
   serviceDid: string
+  publisherDid: string
+  subscriptionReconnectDelay: number
 }
