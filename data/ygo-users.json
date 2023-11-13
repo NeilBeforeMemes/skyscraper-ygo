@@ -408,10 +408,6 @@
         "handle": "mythos.bsky.social"
     },
     {
-        "did": "did:plc:4ds5ilmkzmog7jw6uho4eiwg",
-        "handle": "jordanjamboree.bsky.social"
-    },
-    {
         "did": "did:plc:fppvuafnbxc3h7ke5floflnj",
         "handle": "vamygo.bsky.social"
     },
@@ -446,5 +442,17 @@
     {
         "did": "did:plc:nnfriwhbdv5kft5vuwt23zzq",
         "handle": "liliththefirst.bsky.social"
+    },
+    {
+        "did": "did:plc:l7z7vcy5mvumpiw7ftaganhx",
+        "handle": "zachbutlerygo.bsky.social"
+    },
+    {
+        "did": "did:plc:x3rmcbrtbvtafd3f2hwppwee",
+        "handle": "jennieygo.bsky.social"
+    },
+    {
+        "did": "did:plc:omac7ikpfdp7hswzoqn3umbf",
+        "handle": "thelawygo.bsky.social"
     }
 ]
