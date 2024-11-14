@@ -454,5 +454,9 @@
     {
         "did": "did:plc:omac7ikpfdp7hswzoqn3umbf",
         "handle": "thelawygo.bsky.social"
+    },
+    {
+        "did": "did:plc:h3y27ayyzp4w6lywu3dwb6ht",
+        "handle": "nrygo.bsky.social"
     }
 ]
