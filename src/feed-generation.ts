@@ -6,7 +6,7 @@ import { validateAuth } from './auth'
 export default function (server: Server, ctx: AppContext) {
   server.app.bsky.feed.getFeedSkeleton(async ({ params, req }) => {
     if (
-      params.feed !== 'at://did:web:bluesky.yugioh.gg/app.bsky.feed.generator/skyscraper-ygo'
+      params.feed !== 'at://did:plc:cx4zd7btpgjkn46rtikc3qxo/app.bsky.feed.generator/skyscraper-ygo'
     ) {
       throw new InvalidRequestError(
         'Unsupported algorithm',
@@ -38,7 +38,6 @@ export default function (server: Server, ctx: AppContext) {
       const timeStr = new Date(parseInt(indexedAt, 10)).toISOString()
       builder = builder
         .where('post.indexedAt', '<', timeStr)
-        .orWhere((qb) => qb.where('post.indexedAt', '=', timeStr))
         .where('post.cid', '<', cid)
     }
     const res = await builder.execute()
