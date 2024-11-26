@@ -17,12 +17,18 @@ async function getYgoWordlist() {
 
 }
 
+async function getYgoWordlistRegex() {
+    var wordlist = await getYgoWordlist()
+
+    return new RegExp('\\b(' + wordlist.join('|') + ')\\b');
+}
+
 async function getYgoWhitelist() {
-    var whitelist: string[] = []
+    var whitelist: Set<string> = new Set<string>();
 
     var users = JSON.parse(fs.readFileSync('./data/ygo-users.json', 'utf-8'));
     for(var user of users) {
-        whitelist.push(user.did);
+        whitelist.add(user.did);
     }
 
     console.log(whitelist);
@@ -30,9 +36,9 @@ async function getYgoWhitelist() {
     return whitelist;
 }
 
-var ygoWordlist;
-getYgoWordlist().then(res => {
-    ygoWordlist = res;
+var ygoWordlistRegex;
+getYgoWordlistRegex().then(res => {
+    ygoWordlistRegex = res;
 })
 
 var ygoWhitelist;
@@ -40,4 +46,4 @@ getYgoWhitelist().then(res => {
     ygoWhitelist = res;
 })
 
-export { ygoWordlist, ygoWhitelist };
+export { ygoWordlistRegex, ygoWhitelist };

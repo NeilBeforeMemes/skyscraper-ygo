@@ -144,14 +144,6 @@
         "handle": "haxonosh.bsky.social"
     },
     {
-        "did": "did:plc:rn3j2rkyu3pq52cbwkajm2zr",
-        "handle": "dungeonenvy.bsky.social"
-    },
-    {
-        "did": "did:plc:f52uezva7bnc2i2mdfqraft4",
-        "handle": "la-minou.bsky.social"
-    },
-    {
         "did": "did:plc:cln52mgkfk75r2r6vo5gql3t",
         "handle": "keirandallchikage.bsky.social"
     },
@@ -458,5 +450,17 @@
     {
         "did": "did:plc:h3y27ayyzp4w6lywu3dwb6ht",
         "handle": "nrygo.bsky.social"
+    },
+    {
+        "did": "did:plc:glbhlnvxk76b6l3njqyzl6ml",
+        "handle": "excavate.top"
+    },
+    {
+        "did": "did:plc:rew56hf6rh3li77g57fj7bcq",
+        "handle": "cards.excavate.top"
+    },
+    {
+        "did": "did:plc:xqr6w66roy3lkzobndn5oxk5",
+        "handle": "quincymccoy.bsky.social"
     }
 ]
