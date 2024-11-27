@@ -462,5 +462,13 @@
     {
         "did": "did:plc:xqr6w66roy3lkzobndn5oxk5",
         "handle": "quincymccoy.bsky.social"
+    },
+    {
+        "did": "did:plc:ru44lvfam45pegxpoqvhaxox",
+        "handle": "redmage4evah.bsky.social"
+    },
+    {
+        "did": "did:plc:4z2cirl2w3ldsbvmliwe3t37",
+        "handle": "clamtcg.bsky.social"
     }
 ]

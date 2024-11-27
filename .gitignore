@@ -134,4 +134,4 @@ dist
 *.iml
 
 # db
-db
+db/
