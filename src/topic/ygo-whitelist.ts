@@ -17,8 +17,27 @@ async function getYgoWordlist() {
 
 }
 
+async function getBlockwords() {
+    var blockwords: string[] = []
+
+    // keywords
+    var keywords = JSON.parse(fs.readFileSync('./data/blockwords.json', 'utf-8'));
+    for(var keyword of keywords) {
+        blockwords.push(keyword);
+    }
+
+    return blockwords;
+
+}
+
 async function getYgoWordlistRegex() {
     var wordlist = await getYgoWordlist()
+
+    return new RegExp('\\b(' + wordlist.join('|') + ')\\b');
+}
+
+async function getBlockwordsRegex() {
+    var wordlist = await getBlockwords()
 
     return new RegExp('\\b(' + wordlist.join('|') + ')\\b');
 }
@@ -36,9 +55,25 @@ async function getYgoWhitelist() {
     return whitelist;
 }
 
+async function getYgoBlocklist() {
+    var blocklist: Set<string> = new Set<string>();
+
+    var users = JSON.parse(fs.readFileSync('./data/blockusers.json', 'utf-8'));
+    for(var user of users) {
+        blocklist.add(user.did);
+    }
+
+    return blocklist;
+}
+
 var ygoWordlistRegex;
 getYgoWordlistRegex().then(res => {
     ygoWordlistRegex = res;
+})
+
+var blockwordsRegex;
+getBlockwordsRegex().then(res => {
+    blockwordsRegex = res;
 })
 
 var ygoWhitelist;
@@ -46,4 +81,9 @@ getYgoWhitelist().then(res => {
     ygoWhitelist = res;
 })
 
-export { ygoWordlistRegex, ygoWhitelist };
+var ygoBlocklist;
+getYgoBlocklist().then(res => {
+    ygoBlocklist = res;
+})
+
+export { ygoWordlistRegex, ygoWhitelist, blockwordsRegex, ygoBlocklist };

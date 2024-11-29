@@ -3,7 +3,7 @@ import {
   isCommit,
 } from './lexicon/types/com/atproto/sync/subscribeRepos'
 import { FirehoseSubscriptionBase, getOpsByType } from './util/subscription'
-import { ygoWordlistRegex, ygoWhitelist } from './topic/ygo-whitelist'
+import { ygoWordlistRegex, ygoWhitelist, ygoBlocklist, blockwordsRegex } from './topic/ygo-whitelist'
 
 export class FirehoseSubscription extends FirehoseSubscriptionBase {
 
@@ -28,6 +28,10 @@ export class FirehoseSubscription extends FirehoseSubscriptionBase {
       .filter((create) => {
         // only yugioh-related posts
         
+        if(ygoBlocklist.has(create.author)) {
+          return false;
+        }
+
         if(ygoWhitelist.has(create.author)) {
           console.log(`${create.author}: ${create.record.text}`)
           return true;
@@ -35,7 +39,7 @@ export class FirehoseSubscription extends FirehoseSubscriptionBase {
 
         var lowerPost = create.record.text.toLowerCase();
 
-        if (ygoWordlistRegex.test(lowerPost)) {
+        if (!blockwordsRegex.test(lowerPost) && ygoWordlistRegex.test(lowerPost)) {
           console.log(`${create.uri}: ${create.record.text}`)
           return true;
         }

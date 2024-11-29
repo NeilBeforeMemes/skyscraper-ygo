@@ -1,6 +1,5 @@
 import dotenv from 'dotenv'
 import FeedGenerator from './server'
-import { ygoWhitelist } from './topic/ygo-whitelist'
 
 const run = async () => {
   dotenv.config()
