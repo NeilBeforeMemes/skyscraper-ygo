@@ -33,13 +33,13 @@ async function getBlockwords() {
 async function getYgoWordlistRegex() {
     var wordlist = await getYgoWordlist()
 
-    return new RegExp('\\b(' + wordlist.join('|') + ')\\b');
+    return new RegExp('(' + wordlist.join('|') + ')');
 }
 
 async function getBlockwordsRegex() {
     var wordlist = await getBlockwords()
 
-    return new RegExp('\\b(' + wordlist.join('|') + ')\\b');
+    return new RegExp('(' + wordlist.join('|') + ')');
 }
 
 async function getYgoWhitelist() {

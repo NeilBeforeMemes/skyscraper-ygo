@@ -344,10 +344,6 @@
         "handle": "lautrec.xyz"
     },
     {
-        "did": "did:plc:jwmoudhgizlrfspzkz3l3764",
-        "handle": "waso.bsky.social"
-    },
-    {
         "did": "did:plc:fsgcyxiedrcv4vxtld7itrdx",
         "handle": "goldennovaygo.bsky.social"
     },
@@ -474,5 +470,9 @@
     {
         "did": "did:plc:gdzdye44a4vwxg2dvyipvgno",
         "handle": "lobotomytwink.bsky.social"
+    },
+    {
+        "did": "did:plc:wu7qaqm2e6ndz4m4pdiag4cu",
+        "handle": "outofcharacters.bsky.social"
     }
 ]

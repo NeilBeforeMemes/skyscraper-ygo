@@ -42,7 +42,8 @@ export class FirehoseSubscription extends FirehoseSubscriptionBase {
         if (!blockwordsRegex.test(lowerPost) && ygoWordlistRegex.test(lowerPost)) {
           console.log(`${create.uri}: ${create.record.text}`)
           return true;
-        }
+        }                
+
       })
       .map((create) => {
         // map ygo-related posts to a db row
