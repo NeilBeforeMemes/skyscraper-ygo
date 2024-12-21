@@ -2,12 +2,22 @@ import {
   OutputSchema as RepoEvent,
   isCommit,
 } from './lexicon/types/com/atproto/sync/subscribeRepos'
+import { AtpAgent } from '@atproto/api'
+import * as lexicon from './lexicon'
 import { FirehoseSubscriptionBase, getOpsByType } from './util/subscription'
 import { ygoWordlistRegex, ygoWhitelist, ygoBlocklist, blockwordsRegex } from './topic/ygo-whitelist'
+import { Database } from './db'
+import { ThreadViewPost } from './lexicon/types/app/bsky/feed/defs'
 
 export class FirehoseSubscription extends FirehoseSubscriptionBase {
 
+  agent: AtpAgent;
 
+  constructor(db: Database, service: string, agent: AtpAgent) {
+    super(db, service);
+    this.agent = agent;
+  }
+  
   async handleEvent(evt: RepoEvent) {
     if (!isCommit(evt)) return
 
@@ -25,7 +35,7 @@ export class FirehoseSubscription extends FirehoseSubscriptionBase {
 
     const postsToDelete = ops.posts.deletes.map((del) => del.uri)
     const postsToCreate = ops.posts.creates
-      .filter((create) => {
+      .filter(async (create) => {
         // only yugioh-related posts
         
         if(ygoBlocklist.has(create.author)) {
@@ -37,9 +47,40 @@ export class FirehoseSubscription extends FirehoseSubscriptionBase {
           return true;
         }
 
+        
         var lowerPost = create.record.text.toLowerCase();
 
         if (!blockwordsRegex.test(lowerPost) && ygoWordlistRegex.test(lowerPost)) {
+          try {
+            if(create.record.reply !== null && create.record.reply !== undefined)
+              {
+                var thread = await this.agent.getPostThread({
+                  uri: create.record.reply.parent.uri
+                });
+                var threadpost = thread.data.thread
+                while (threadpost !== null && threadpost !== undefined)
+                {
+                  var lowerThreadPost = ((threadpost as ThreadViewPost).post.record as any)?.text?.toLowerCase();
+                  if (blockwordsRegex.test(lowerThreadPost))
+                  {
+                    return false;
+                  }
+                  else
+                  {
+                    threadpost = threadpost.parent as ThreadViewPost
+                  }
+                }
+
+              }
+          }
+          catch(ex)
+          {
+            console.log("failed to read thread")
+            console.log(ex)
+          }
+          
+          
+
           console.log(`${create.uri}: ${create.record.text}`)
           return true;
         }                

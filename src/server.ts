@@ -9,6 +9,7 @@ import { createDb, Database, migrateToLatest } from './db'
 import { FirehoseSubscription } from './subscription'
 import { AppContext, Config } from './config'
 import wellKnown from './well-known'
+import AtpAgent, { AtpSessionData, AtpSessionEvent } from '@atproto/api'
 
 export class FeedGenerator {
   public app: express.Application
@@ -29,10 +30,21 @@ export class FeedGenerator {
     this.cfg = cfg
   }
 
-  static create(cfg: Config) {
+  static async create(cfg: Config) {
     const app = express()
     const db = createDb(cfg.sqliteLocation)
-    const firehose = new FirehoseSubscription(db, cfg.subscriptionEndpoint)
+    var agent = new AtpAgent({
+      service: 'https://bsky.social',
+      persistSession: (evt: AtpSessionEvent, sess?: AtpSessionData) => {
+        // store the session-data for reuse
+      },
+    });
+        
+    await agent.login({
+      identifier: process.env.FEEDGEN_APP_USER as string,
+      password: process.env.FEEDGEN_APP_PASSWORD as string,
+    }) 
+    const firehose = new FirehoseSubscription(db, cfg.subscriptionEndpoint, agent)
 
     const didCache = new MemoryCache()
     const didResolver = new DidResolver({
