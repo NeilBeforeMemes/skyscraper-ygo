@@ -34,66 +34,70 @@ export class FirehoseSubscription extends FirehoseSubscriptionBase {
     // }
 
     const postsToDelete = ops.posts.deletes.map((del) => del.uri)
-    const postsToCreate = ops.posts.creates
-      .filter(async (create) => {
-        // only yugioh-related posts
+    const postsToCreate: any[] = [];
+    for(var create of ops.posts.creates)
+    {
+      // only yugioh-related posts
         
-        if(ygoBlocklist.has(create.author)) {
-          return false;
-        }
+      if(ygoBlocklist.has(create.author)) {
+        continue;
+      }
 
-        if(ygoWhitelist.has(create.author)) {
-          console.log(`${create.author}: ${create.record.text}`)
-          return true;
-        }
-
-        
-        var lowerPost = create.record.text.toLowerCase();
-
-        if (!blockwordsRegex.test(lowerPost) && ygoWordlistRegex.test(lowerPost)) {
-          try {
-            if(create.record.reply !== null && create.record.reply !== undefined)
-              {
-                var thread = await this.agent.getPostThread({
-                  uri: create.record.reply.parent.uri
-                });
-                var threadpost = thread.data.thread
-                while (threadpost !== null && threadpost !== undefined)
-                {
-                  var lowerThreadPost = ((threadpost as ThreadViewPost).post.record as any)?.text?.toLowerCase();
-                  if (blockwordsRegex.test(lowerThreadPost))
-                  {
-                    return false;
-                  }
-                  else
-                  {
-                    threadpost = threadpost.parent as ThreadViewPost
-                  }
-                }
-
-              }
-          }
-          catch(ex)
-          {
-            console.log("failed to read thread")
-            console.log(ex)
-          }
-          
-          
-
-          console.log(`${create.uri}: ${create.record.text}`)
-          return true;
-        }                
-
-      })
-      .map((create) => {
-        // map ygo-related posts to a db row
-        return {
+      if(ygoWhitelist.has(create.author)) {
+        console.log(`${create.author}: ${create.record.text}`)
+        postsToCreate.push({
           uri: create.uri,
           cid: create.cid,
           indexedAt: new Date().toISOString(),
+        });
+      }
+
+      
+      var lowerPost = create.record.text.toLowerCase();
+
+      if (!blockwordsRegex.test(lowerPost) && ygoWordlistRegex.test(lowerPost)) {
+        var safe = true;
+        try {
+          if(create.record.reply !== null && create.record.reply !== undefined)
+            {
+              var thread = await this.agent.getPostThread({
+                uri: create.record.reply.parent.uri
+              }).then(x => x);
+              var threadpost = thread.data.thread
+              
+              while (safe && threadpost !== null && threadpost !== undefined)
+              {
+                var lowerThreadPost = ((threadpost as ThreadViewPost).post.record as any)?.text?.toLowerCase();
+                if (blockwordsRegex.test(lowerThreadPost))
+                {
+                  safe = false;
+                }
+                else
+                {
+                  threadpost = threadpost.parent as ThreadViewPost
+                }
+              }
+
+            }
         }
-      })
+        catch(ex)
+        {
+          console.log("failed to read thread")
+          console.log(ex)
+          safe = false;
+        }
+        
+        if(safe) {
+          console.log(`${create.uri}: ${create.record.text}`)
+          postsToCreate.push({
+            uri: create.uri,
+            cid: create.cid,
+            indexedAt: new Date().toISOString(),
+          });
+        }
+        
+      }                
+    }
 
     if (postsToDelete.length > 0) {
       await this.db
