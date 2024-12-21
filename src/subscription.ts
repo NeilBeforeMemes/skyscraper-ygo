@@ -50,6 +50,7 @@ export class FirehoseSubscription extends FirehoseSubscriptionBase {
           cid: create.cid,
           indexedAt: new Date().toISOString(),
         });
+        continue;
       }
 
       
