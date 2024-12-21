@@ -474,5 +474,9 @@
     {
         "did": "did:plc:wu7qaqm2e6ndz4m4pdiag4cu",
         "handle": "outofcharacters.bsky.social"
+    },
+    {
+        "did": "did:plc:npdgizwmeqrcmuivwlznqkgt",
+        "handle": "thepurplepancake.bsky.social"
     }
 ]
