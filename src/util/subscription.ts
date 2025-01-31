@@ -21,8 +21,10 @@ export abstract class FirehoseSubscriptionBase {
       service: service,
       method: ids.ComAtprotoSyncSubscribeRepos,
       getParams: () => this.getCursor(),
-      validate: (value: unknown) => {
+      validate: (value: any) => {
         try {
+          value.seq = parseInt(value.seq)
+
           return lexicons.assertValidXrpcMessage<RepoEvent>(
             ids.ComAtprotoSyncSubscribeRepos,
             value,
